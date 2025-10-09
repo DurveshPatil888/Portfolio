@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Durvesh Patil — Frontend Developer & Freelancer. Responsive portfolio showcasing projects, services, GitHub and resume."
+    />
+    <title>Durvesh Patil — Portfolio</title>
+
+    <!-- Icons & Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#home" class="logo">Durvesh Patil</a>
+
+      <button
+        id="menu-btn"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        <i class="fa fa-bars"></i>
+      </button>
+
+      <nav id="navbar" class="">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HOME / HERO -->
+    <main>
+      <section id="home" class="home">
+        <div class="home-img" aria-hidden="true">
+          <img src="main.jpg" alt="Durvesh Patil portrait" />
+        </div>
+
+        <div class="home-content">
+          <h1>Hi, It's <span>Durvesh Patil</span></h1>
+          <h3 class="typing-text">
+            <span id="typed"></span><span class="cursor">|</span>
+          </h3>
+          <p>
+            Hi, I’m Durvesh Patil, a WordPress & frontend developer. I build clean, responsive websites using HTML, CSS, JavaScript, and React. I focus on performance, usability, and maintainable code, and I’m open to freelance projects and internships.
+          </p>
+
+          <div class="home-actions">
+            <a href="#contact" class="btn hire-btn">
+              <i class="fa fa-paper-plane"></i> Hire Me
+            </a>
+            <a href="resume.pdf" class="btn-outline" download>
+              <i class="fa fa-download"></i> Download Resume
+            </a>
+            <a href="resume.pdf" class="btn-outline" target="_blank">
+              <i class="fa fa-eye"></i> View Resume
+            </a>
+          </div>
+
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/durvesh-patil-808982293/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/DurveshPatil888" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/durveshhhpatil/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </section>
+      <!-- SERVICES -->
+      <section id="services" class="section services">
+        <h2 class="section-title">Services</h2>
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-icon"><i class="fa fa-code"></i></div>
+            <h3>Frontend Development</h3>
+            <p>Modern, maintainable websites using HTML, CSS, JavaScript, and React. Clean code and best practices.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fa fa-mobile-alt"></i></div>
+            <h3>Responsive Design</h3>
+            <p>Pixel-perfect layouts that look great on all devices. Mobile-first, cross-browser compatibility.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fa fa-bolt"></i></div>
+            <h3>Landing Pages</h3>
+            <p>High-converting, fast-loading landing pages for products, portfolios, and businesses.</p>
+          </div>
+          <div class="service-card">
+            <div class="service-icon"><i class="fab fa-wordpress"></i></div>
+            <h3>WordPress Development</h3>
+            <p>Custom WordPress sites, themes, and basic plugin setup. Easy to manage and scalable.</p>
+          </div>
+        </div>
+      </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects">
+  <h2 class="section-title">Projects</h2>
+  <p class="muted">
+    Some of my recent and learning projects. More on my <a href="https://github.com/DurveshPatil888" target="_blank">GitHub</a>.
+  </p>
+
+  <div class="projects-grid">
+    <div class="project-card">
+      <img src="BeautyZone.jpg" alt="Beauty Zone Website" class="project-img">
+      <div class="project-body">
+        <h3>Beauty Zone Website</h3>
+        <p>Simple beauty salon website made with HTML and CSS. Clean layout and responsive design.</p>
+        <div class="project-actions">
+          <a href="https://github.com/DurveshPatil888/Beauty-Zone" class="small-btn" target="_blank"><i class="fab fa-github"></i> Code</a>
+          <a href="https://durveshpatil888.github.io/Beauty-Zone/" class="small-btn" target="_blank"><i class="fa fa-external-link-alt"></i> Live</a>
+        </div>
+      </div>
+    </div>
+    <div class="project-card">
+      <img src="WineShop .jpg" alt="Wine Shop WordPress" class="project-img">
+      <div class="project-body">
+        <h3>Wine Shop (WordPress)</h3>
+        <p>WordPress-based wine shop website. Custom theme, product showcase, and easy management.</p>
+        <div class="project-actions">
+          <a href="https://github.com/DurveshPatil888" class="small-btn" target="_blank"><i class="fab fa-github"></i> Code</a>
+        </div>
+      </div>
+    </div>
+    <div class="project-card">
+      <img src="TicTacToe.jpg" alt="Tic Tac Toe Game" class="project-img">
+      <div class="project-body">
+        <h3>Tic-Tac-Toe Game</h3>
+        <p>Classic tic-tac-toe game built with HTML, CSS, and JavaScript. Playable in browser.</p>
+        <div class="project-actions">
+          <a href="https://github.com/DurveshPatil888/tic-tac-toe" class="small-btn" target="_blank"><i class="fab fa-github"></i> Code</a>
+          <a href="https://durveshpatil888.github.io/tic-tac-toe/" class="small-btn" target="_blank"><i class="fa fa-external-link-alt"></i> Live</a>
+        </div>
+      </div>
+    </div>
+    <div class="project-card">
+      <img src="WhackaMoleGame.jpg" alt="Whack a Mole Game" class="project-img">
+      <div class="project-body">
+        <h3>Whack a Mole Game</h3>
+        <p>Interactive whack-a-mole game built with HTML, CSS, and JavaScript. Great for learning DOM events.</p>
+        <div class="project-actions">
+          <a href="https://github.com/DurveshPatil888/whack-a-mole-game" class="small-btn" target="_blank"><i class="fab fa-github"></i> Code</a>
+          <a href="https://durveshpatil888.github.io/whack-a-mole-game/" class="small-btn" target="_blank"><i class="fa fa-external-link-alt"></i> Live</a>
+        </div>
+      </div>
+    </div>
+    <div class="project-card">
+      <img src="RockPaperScissors.jpg" alt="Rock Paper Scissors" class="project-img">
+      <div class="project-body">
+        <h3>Rock Paper Scissors</h3>
+        <p>Fun rock-paper-scissors game using HTML, CSS, and JavaScript. Simple UI and logic.</p>
+        <div class="project-actions">
+          <a href="https://github.com/DurveshPatil888/Rock-Paper-Scissors" class="small-btn" target="_blank"><i class="fab fa-github"></i> Code</a>
+          <a href="https://durveshpatil888.github.io/Rock-Paper-Scissors/" class="small-btn" target="_blank"><i class="fa fa-external-link-alt"></i> Live</a>
+        </div>
+      </div>
+    </div>
+    <div class="project-card">
+      <img src="WeatherApp.jpg" alt="Weather App" class="project-img">
+      <div class="project-body">
+        <h3>Weather App</h3>
+        <p>Weather app using HTML, CSS, and JavaScript. Fetches live weather data for any city.</p>
+        <div class="project-actions">
+          <a href="https://github.com/DurveshPatil888/Weather-app" class="small-btn" target="_blank"><i class="fab fa-github"></i> Code</a>
+          <a href="https://durveshpatil888.github.io/Weather-app/" class="small-btn" target="_blank"><i class="fa fa-external-link-alt"></i> Live</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      </section>
+
+      <!-- ABOUT (clean two-column) -->
+      <section id="about" class="section about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              Hi, I’m Durvesh Patil, a WordPress & frontend developer. I build clean, responsive websites using HTML, CSS, JavaScript, and React. I focus on performance, usability, and maintainable code, and I’m open to freelance projects and internships.
+            </p>
+            <ul class="about-list">
+              <li><strong>Skills:</strong> HTML, CSS, JavaScript, React, WordPress, Responsive Design</li>
+              <li><strong>Location:</strong> India</li>
+              <li><strong>Email:</strong> <a href="mailto:durveshpatil888@gmail.com">durveshpatil888@gmail.com</a></li>
+            </ul>
+          </div>
+          <div class="about-image">
+            <img src="main.jpg" alt="Durvesh Patil" />
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section contact">
+        <h2 class="section-title">Contact</h2>
+        <p class="muted">
+          Interested in working together or have a question? Fill the form or
+          email me directly at
+          <a href="mailto:durveshpatil888@gmail.com"
+            >durveshpatil888@gmail.com</a
+          >
+        </p>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Let's Connect</h3>
+            <p><i class="fa fa-envelope"></i> durveshpatil888@gmail.com</p>
+            <p>
+              <i class="fab fa-linkedin"></i>
+              <a
+                href="https://www.linkedin.com/in/durvesh-patil-808982293/"
+                target="_blank"
+                >LinkedIn</a
+              >
+            </p>
+            <p>
+              <i class="fab fa-github"></i>
+              <a href="https://github.com/DurveshPatil888" target="_blank"
+                >GitHub</a
+              >
+            </p>
+          </div>
+          <form
+            class="contact-form"
+            action="https://formspree.io/f/xwkgyyqg"
+            method="POST"
+            target="_blank"
+            autocomplete="off"
+          >
+            <label>
+              Name
+              <input type="text" name="name" required autocomplete="off" />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" required autocomplete="off" />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <div class="form-actions">
+              <button type="submit" class="btn">
+                <i class="fa fa-paper-plane"></i> Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p>
+          &copy; <span id="year"></span> Durvesh Patil. All rights reserved.
+        </p>
+      </footer>
+    </main>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+      // Set current year in footer
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
