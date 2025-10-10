@@ -27,17 +27,21 @@ header {
   left: 0;
   right: 0;
   display: flex;
-
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem 6%;
   z-index: 120;
-  background: transparent;
-  backdrop-filter: none;
-  box-shadow: none;
-  transition: background 0.3s, backdrop-filter 0.3s, box-shadow 0.3s;
+  background: transparent !important; /* ⬅️ !important जोड़ें */
+  backdrop-filter: none !important; /* ⬅️ !important जोड़ें */
+  box-shadow: none !important; /* ⬅️ !important जोड़ें */
+  transition: none; /* ⬅️ कोई fading effect नहीं */
 }
-/* Scroll effect: Adding background on scroll */
+
+/* Scroll effect: Making it fully transparent even after scrolling */
 header.scrolled {
-  background: rgba(0, 0, 0, 0.85);
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.12);
+  background: transparent !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
 }
 
 html {
