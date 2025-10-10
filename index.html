@@ -9,7 +9,6 @@
     />
     <title>Durvesh Patil — Portfolio</title>
 
-    <!-- Icons & Fonts -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -19,12 +18,24 @@
       rel="stylesheet"
     />
 
-    <!-- Styles -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="preloader" class="preloader">
+      <div class="loader-content">
+        <p class="loader-tagline">
+          Building digital foundations with speed and precision.
+        </p>
+        <h1 id="load-percentage">0%</h1>
+        <div class="loader-bar-container">
+          <div id="loader-bar" class="loader-bar"></div>
+        </div>
+      </div>
+    </div>
     <header>
-      <a href="#home" class="logo">Durvesh Patil</a>
+      <a href="#home" class="logo">Portfolio</a>
 
       <button
         id="menu-btn"
@@ -43,7 +54,6 @@
       </nav>
     </header>
 
-    <!-- HOME / HERO -->
     <main>
       <section id="home" class="home">
         <div class="home-img" aria-hidden="true">
@@ -51,212 +61,371 @@
         </div>
 
         <div class="home-content">
-          <h1>Hi, It's <span>Durvesh Patil</span></h1>
+          <h1>Hello! I'm <span>Durvesh</span></h1>
           <h3 class="typing-text">
             <span id="typed"></span><span class="cursor">|</span>
           </h3>
-          <p>
-            Hi, I’m Durvesh Patil, a WordPress & frontend developer. I build clean, responsive websites using HTML, CSS, JavaScript, and React. I focus on performance, usability, and maintainable code, and I’m open to freelance projects and internships.
+          <p class="home-tagline">
+            I craft clean, responsive websites with a focus on usability and
+            performance.
           </p>
 
           <div class="home-actions">
             <a href="#contact" class="btn hire-btn">
-              <i class="fa fa-paper-plane"></i> Hire Me
+              <i class="fa fa-paper-plane"></i> Let's Talk
             </a>
             <a href="resume.pdf" class="btn-outline" download>
               <i class="fa fa-download"></i> Download Resume
             </a>
-            <a href="resume.pdf" class="btn-outline" target="_blank">
-              <i class="fa fa-eye"></i> View Resume
-            </a>
           </div>
 
           <div class="social-icons">
-            <a href="https://www.linkedin.com/in/durvesh-patil-808982293/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://github.com/DurveshPatil888" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://www.instagram.com/durveshhhpatil/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a
+              href="https://www.linkedin.com/in/durvesh-patil-808982293/"
+              target="_blank"
+              aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a
+              href="https://github.com/DurveshPatil888"
+              target="_blank"
+              aria-label="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/durveshhhpatil/"
+              target="_blank"
+              aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
           </div>
         </div>
       </section>
-      <!-- SERVICES -->
       <section id="services" class="section services">
         <h2 class="section-title">Services</h2>
         <div class="services-grid">
           <div class="service-card">
             <div class="service-icon"><i class="fa fa-code"></i></div>
             <h3>Frontend Development</h3>
-            <p>Modern, maintainable websites using HTML, CSS, JavaScript, and React. Clean code and best practices.</p>
+            <p>
+              Modern, maintainable websites using HTML, CSS, JavaScript, and
+              React. Clean code and best practices.
+            </p>
           </div>
           <div class="service-card">
-            <div class="service-icon"><i class="fa fa-mobile-alt"></i></div>
-            <h3>Responsive Design</h3>
-            <p>Pixel-perfect layouts that look great on all devices. Mobile-first, cross-browser compatibility.</p>
+            <div class="service-icon"><i class="fab fa-wordpress"></i></div>
+            <h3>Custom WordPress Builds</h3>
+            <p>
+              Building high-performance WordPress sites for businesses and
+              freelancers. Robust, fast, and easy to manage.
+            </p>
           </div>
           <div class="service-card">
             <div class="service-icon"><i class="fa fa-bolt"></i></div>
             <h3>Landing Pages</h3>
-            <p>High-converting, fast-loading landing pages for products, portfolios, and businesses.</p>
+            <p>
+              High-converting, fast-loading landing pages for products,
+              portfolios, and businesses.
+            </p>
           </div>
           <div class="service-card">
-            <div class="service-icon"><i class="fab fa-wordpress"></i></div>
-            <h3>WordPress Development</h3>
-            <p>Custom WordPress sites, themes, and basic plugin setup. Easy to manage and scalable.</p>
+            <div class="service-icon"><i class="fa fa-mobile-alt"></i></div>
+            <h3>Responsive Design</h3>
+            <p>
+              Pixel-perfect layouts that look great on all devices.
+              Mobile-first, cross-browser compatibility.
+            </p>
           </div>
         </div>
       </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" class="section projects">
-  <h2 class="section-title">Projects</h2>
-  <p class="muted">
-    Some of my recent and learning projects. More on my <a href="https://github.com/DurveshPatil888" target="_blank">GitHub</a>.
-  </p>
+      <section id="projects" class="section projects">
+        <h2 class="section-title" data-aos="fade-down">Projects</h2>
+        <p class="muted" data-aos="fade-down" data-aos-delay="200">
+          Some of my recent and learning projects. More on my
+          <a href="https://github.com/DurveshPatil888" target="_blank">GitHub</a
+          >.
+        </p>
 
-  <div class="projects-grid">
-    <div class="project-card">
-      <img src="BeautyZone.jpg" alt="Beauty Zone Website" class="project-img">
-      <div class="project-body">
-        <h3>Beauty Zone Website</h3>
-        <p>Simple beauty salon website made with HTML and CSS. Clean layout and responsive design.</p>
-        <div class="project-actions">
-          <a href="https://github.com/DurveshPatil888/Beauty-Zone" class="small-btn" target="_blank"><i class="fab fa-github"></i> Code</a>
-          <a href="https://durveshpatil888.github.io/Beauty-Zone/" class="small-btn" target="_blank"><i class="fa fa-external-link-alt"></i> Live</a>
+        <div class="projects-grid">
+          <div
+            class="project-card"
+            data-aos="fade-right"
+            data-aos-delay="0"
+            data-project-id="beauty-zone"
+          >
+            <img
+              src="BeautyZone.jpg"
+              alt="Beauty Zone Website"
+              class="project-img"
+            />
+            <div class="project-body">
+              <h3>Beauty Zone Website</h3>
+              <p>
+                Simple beauty salon website made with HTML and CSS. Clean layout
+                and responsive design.
+              </p>
+              <div class="project-actions">
+                <a
+                  href="https://github.com/DurveshPatil888/Beauty-Zone"
+                  class="small-btn"
+                  target="_blank"
+                  ><i class="fab fa-github"></i> Code</a
+                >
+                <a
+                  href="https://durveshpatil888.github.io/Beauty-Zone/"
+                  class="small-btn"
+                  target="_blank"
+                  ><i class="fa fa-external-link-alt"></i> Live</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="project-card"
+            data-aos="fade-up"
+            data-aos-delay="150"
+            data-project-id="wine-shop"
+          >
+            <img
+              src="WineShop .jpg"
+              alt="Wine Shop WordPress"
+              class="project-img"
+            />
+            <div class="project-body">
+              <h3>Wine Shop (WordPress)</h3>
+              <p>
+                WordPress-based wine shop website using Elementor for custom
+                layouts and product showcasing.
+              </p>
+              <div class="project-actions">
+                <a
+                  href="https://github.com/DurveshPatil888"
+                  class="small-btn"
+                  target="_blank"
+                  ><i class="fab fa-github"></i> Code</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="project-card"
+            data-aos="fade-left"
+            data-aos-delay="300"
+            data-project-id="tic-tac-toe"
+          >
+            <img
+              src="TicTacToe.jpg"
+              alt="Tic Tac Toe Game"
+              class="project-img"
+            />
+            <div class="project-body">
+              <h3>Tic-Tac-Toe Game</h3>
+              <p>
+                Classic tic-tac-toe game built with HTML, CSS, and JavaScript.
+                Playable in browser.
+              </p>
+              <div class="project-actions">
+                <a
+                  href="https://github.com/DurveshPatil888/tic-tac-toe"
+                  class="small-btn"
+                  target="_blank"
+                  ><i class="fab fa-github"></i> Code</a
+                >
+                <a
+                  href="https://durveshpatil888.github.io/tic-tac-toe/"
+                  class="small-btn"
+                  target="_blank"
+                  ><i class="fa fa-external-link-alt"></i> Live</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="project-card"
+            data-aos="fade-right"
+            data-aos-delay="0"
+            data-project-id="whack-a-mole"
+          >
+            <img
+              src="WhackaMoleGame.jpg"
+              alt="Whack a Mole Game"
+              class="project-img"
+            />
+            <div class="project-body">
+              <h3>Whack a Mole Game</h3>
+              <p>
+                Interactive whack-a-mole game built with HTML, CSS, and
+                JavaScript. Great for learning DOM events.
+              </p>
+              <div class="project-actions">
+                <a
+                  href="https://github.com/DurveshPatil888/whack-a-mole-game"
+                  class="small-btn"
+                  target="_blank"
+                  ><i class="fab fa-github"></i> Code</a
+                >
+                <a
+                  href="https://durveshpatil888.github.io/whack-a-mole-game/"
+                  class="small-btn"
+                  target="_blank"
+                  ><i class="fa fa-external-link-alt"></i> Live</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="project-card"
+            data-aos="fade-up"
+            data-aos-delay="150"
+            data-project-id="rock-paper-scissors"
+          >
+            <img
+              src="RockPaperScissors.jpg"
+              alt="Rock Paper Scissors"
+              class="project-img"
+            />
+            <div class="project-body">
+              <h3>Rock Paper Scissors</h3>
+              <p>
+                Fun rock-paper-scissors game using HTML, CSS, and JavaScript.
+                Simple UI and logic.
+              </p>
+              <div class="project-actions">
+                <a
+                  href="https://github.com/DurveshPatil888/Rock-Paper-Scissors"
+                  class="small-btn"
+                  target="_blank"
+                  ><i class="fab fa-github"></i> Code</a
+                >
+                <a
+                  href="https://durveshpatil888.github.io/Rock-Paper-Scissors/"
+                  class="small-btn"
+                  target="_blank"
+                  ><i class="fa fa-external-link-alt"></i> Live</a
+                >
+              </div>
+            </div>
+          </div>
+          <div
+            class="project-card"
+            data-aos="fade-left"
+            data-aos-delay="300"
+            data-project-id="weather-app"
+          >
+            <img src="WeatherApp.jpg" alt="Weather App" class="project-img" />
+            <div class="project-body">
+              <h3>Weather App</h3>
+              <p>
+                Weather app using HTML, CSS, and JavaScript. Fetches live
+                weather data for any city.
+              </p>
+              <div class="project-actions">
+                <a
+                  href="https://github.com/DurveshPatil888/Weather-app"
+                  class="small-btn"
+                  target="_blank"
+                  ><i class="fab fa-github"></i> Code</a
+                >
+                <a
+                  href="https://durveshpatil888.github.io/Weather-app/"
+                  class="small-btn"
+                  target="_blank"
+                  ><i class="fa fa-external-link-alt"></i> Live</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="project-card">
-      <img src="WineShop .jpg" alt="Wine Shop WordPress" class="project-img">
-      <div class="project-body">
-        <h3>Wine Shop (WordPress)</h3>
-        <p>WordPress-based wine shop website. Custom theme, product showcase, and easy management.</p>
-        <div class="project-actions">
-          <a href="https://github.com/DurveshPatil888" class="small-btn" target="_blank"><i class="fab fa-github"></i> Code</a>
-        </div>
-      </div>
-    </div>
-    <div class="project-card">
-      <img src="TicTacToe.jpg" alt="Tic Tac Toe Game" class="project-img">
-      <div class="project-body">
-        <h3>Tic-Tac-Toe Game</h3>
-        <p>Classic tic-tac-toe game built with HTML, CSS, and JavaScript. Playable in browser.</p>
-        <div class="project-actions">
-          <a href="https://github.com/DurveshPatil888/tic-tac-toe" class="small-btn" target="_blank"><i class="fab fa-github"></i> Code</a>
-          <a href="https://durveshpatil888.github.io/tic-tac-toe/" class="small-btn" target="_blank"><i class="fa fa-external-link-alt"></i> Live</a>
-        </div>
-      </div>
-    </div>
-    <div class="project-card">
-      <img src="WhackaMoleGame.jpg" alt="Whack a Mole Game" class="project-img">
-      <div class="project-body">
-        <h3>Whack a Mole Game</h3>
-        <p>Interactive whack-a-mole game built with HTML, CSS, and JavaScript. Great for learning DOM events.</p>
-        <div class="project-actions">
-          <a href="https://github.com/DurveshPatil888/whack-a-mole-game" class="small-btn" target="_blank"><i class="fab fa-github"></i> Code</a>
-          <a href="https://durveshpatil888.github.io/whack-a-mole-game/" class="small-btn" target="_blank"><i class="fa fa-external-link-alt"></i> Live</a>
-        </div>
-      </div>
-    </div>
-    <div class="project-card">
-      <img src="RockPaperScissors.jpg" alt="Rock Paper Scissors" class="project-img">
-      <div class="project-body">
-        <h3>Rock Paper Scissors</h3>
-        <p>Fun rock-paper-scissors game using HTML, CSS, and JavaScript. Simple UI and logic.</p>
-        <div class="project-actions">
-          <a href="https://github.com/DurveshPatil888/Rock-Paper-Scissors" class="small-btn" target="_blank"><i class="fab fa-github"></i> Code</a>
-          <a href="https://durveshpatil888.github.io/Rock-Paper-Scissors/" class="small-btn" target="_blank"><i class="fa fa-external-link-alt"></i> Live</a>
-        </div>
-      </div>
-    </div>
-    <div class="project-card">
-      <img src="WeatherApp.jpg" alt="Weather App" class="project-img">
-      <div class="project-body">
-        <h3>Weather App</h3>
-        <p>Weather app using HTML, CSS, and JavaScript. Fetches live weather data for any city.</p>
-        <div class="project-actions">
-          <a href="https://github.com/DurveshPatil888/Weather-app" class="small-btn" target="_blank"><i class="fab fa-github"></i> Code</a>
-          <a href="https://durveshpatil888.github.io/Weather-app/" class="small-btn" target="_blank"><i class="fa fa-external-link-alt"></i> Live</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
       </section>
 
-      <!-- ABOUT (clean two-column) -->
       <section id="about" class="section about">
-        <h2 class="section-title">About Me</h2>
+        <h2 class="section-title" data-aos="fade-down">About Me</h2>
         <div class="about-grid">
-          <div class="about-text">
+          <div
+            class="about-text"
+            data-aos="fade-right"
+            data-aos-duration="1000"
+          >
             <p>
-              Hi, I’m Durvesh Patil, a WordPress & frontend developer. I build clean, responsive websites using HTML, CSS, JavaScript, and React. I focus on performance, usability, and maintainable code, and I’m open to freelance projects and internships.
+              Hello! I’m Durvesh Patil, a Frontend Developer and dedicated
+              WordPress Specialist. I focus on building digital foundations that
+              are fast, visually appealing, and scalable.
+            </p>
+            <p>
+              I deliver custom, high-speed, and secure WordPress websites for
+              businesses and freelancers. Whether it's a lead-generating landing
+              page, a business site, or a portfolio, I ensure a clean,
+              responsive design and optimal performance. WordPress is my
+              strength for providing clients with an easy-to-manage platform.
+            </p>
+            <p>
+              My core technical skills include pure HTML, CSS, JavaScript, and
+              React. I love crafting interactive user interfaces and maintaining
+              a focus on clean, efficient code. I’m actively open to freelance
+              projects and internship opportunities.
             </p>
             <ul class="about-list">
-              <li><strong>Skills:</strong> HTML, CSS, JavaScript, React, WordPress, Responsive Design</li>
+              <li>
+                <strong>Skills:</strong> HTML, CSS, JavaScript, React,
+                WordPress, Responsive Design
+              </li>
               <li><strong>Location:</strong> India</li>
-              <li><strong>Email:</strong> <a href="mailto:durveshpatil888@gmail.com">durveshpatil888@gmail.com</a></li>
+              <li>
+                <strong>Email:</strong>
+                <a href="mailto:durveshpatil888@gmail.com"
+                  >durveshpatil888@gmail.com</a
+                >
+              </li>
             </ul>
           </div>
-          <div class="about-image">
+          <div
+            class="about-image"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
             <img src="main.jpg" alt="Durvesh Patil" />
           </div>
         </div>
       </section>
 
-      <!-- CONTACT -->
-      <section id="contact" class="section contact">
-        <h2 class="section-title">Contact</h2>
-        <p class="muted">
-          Interested in working together or have a question? Fill the form or
-          email me directly at
-          <a href="mailto:durveshpatil888@gmail.com"
+      <section id="contact" class="section contact new-contact-design">
+        <h2 class="contact-main-heading" data-aos="fade-up">
+          Ready to build? <br />
+          Let's talk strategy and code.
+        </h2>
+
+        <div class="contact-info-block">
+          <p class="get-in-touch" data-aos="fade-up" data-aos-delay="200">
+            Get in touch
+          </p>
+          <a
+            href="mailto:durveshpatil888@gmail.com"
+            class="contact-email"
+            data-aos="fade-up"
+            data-aos-delay="300"
             >durveshpatil888@gmail.com</a
           >
-        </p>
+          <p class="contact-detail" data-aos="fade-up" data-aos-delay="400">
+            +91-8208629384
+          </p>
+          <p class="contact-detail" data-aos="fade-up" data-aos-delay="500">
+            Nashik, India
+          </p>
 
-        <div class="contact-grid">
-          <div class="contact-card">
-            <h3>Let's Connect</h3>
-            <p><i class="fa fa-envelope"></i> durveshpatil888@gmail.com</p>
-            <p>
-              <i class="fab fa-linkedin"></i>
-              <a
-                href="https://www.linkedin.com/in/durvesh-patil-808982293/"
-                target="_blank"
-                >LinkedIn</a
-              >
-            </p>
-            <p>
-              <i class="fab fa-github"></i>
-              <a href="https://github.com/DurveshPatil888" target="_blank"
-                >GitHub</a
-              >
-            </p>
+          <div class="contact-socials" data-aos="fade-up" data-aos-delay="600">
+            <a
+              href="https://www.linkedin.com/in/durvesh-patil-808982293/"
+              target="_blank"
+              >LinkedIn</a
+            >
+            <a href="https://github.com/DurveshPatil888" target="_blank"
+              >Github</a
+            >
+            <a href="https://www.instagram.com/durveshhhpatil/" target="_blank"
+              >Instagram</a
+            >
           </div>
-          <form
-            class="contact-form"
-            action="https://formspree.io/f/xwkgyyqg"
-            method="POST"
-            target="_blank"
-            autocomplete="off"
-          >
-            <label>
-              Name
-              <input type="text" name="name" required autocomplete="off" />
-            </label>
-            <label>
-              Email
-              <input type="email" name="email" required autocomplete="off" />
-            </label>
-            <label>
-              Message
-              <textarea name="message" rows="4" required></textarea>
-            </label>
-            <div class="form-actions">
-              <button type="submit" class="btn">
-                <i class="fa fa-paper-plane"></i> Send Message
-              </button>
-            </div>
-          </form>
         </div>
       </section>
 
@@ -267,7 +436,35 @@
       </footer>
     </main>
 
-    <!-- Scripts -->
+    <div id="project-modal" class="project-modal">
+      <div class="modal-content">
+        <button class="close-modal-btn">&times;</button>
+        <div class="modal-body">
+          <img
+            id="modal-project-img"
+            src=""
+            alt="Project Image"
+            class="modal-img"
+          />
+          <div class="modal-text-content">
+            <h3 id="modal-project-title">Project Title</h3>
+            <div class="modal-tags" id="modal-project-tags"></div>
+            <p id="modal-project-description">Project Description goes here.</p>
+            <div class="modal-actions" id="modal-project-actions"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      // Initialize AOS library - It will be re-initialized by the JS Preloader logic after it's hidden
+      AOS.init({
+        once: false,
+        duration: 1200,
+        offset: 100,
+      });
+    </script>
+
     <script src="script.js"></script>
     <script>
       // Set current year in footer
