@@ -215,7 +215,6 @@ document.addEventListener('DOMContentLoaded', () => {
       description:
         'A custom AI-powered virtual assistant built with React.js and modern web APIs. Features advanced LLM integration with highly optimized prompt engineering to maintain complex conversation context and ensure accurate, context-aware responses. Architected with a highly responsive front-end interface for seamless, low-latency conversational user experience.',
       github: 'https://github.com/DurveshPatil888/Jarvis-AI',
-      live: '#',
     },
     'netflix-gpt': {
       img: 'material/netflix GPT.png',
