@@ -24,13 +24,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalProjectActions = document.getElementById('modal-project-actions');
   const projectCards = document.querySelectorAll('.project-card');
 
-  // ********** CORRECTED PRELOADER LOGIC (8 SEC COUNT + 2 SEC DELAY) **********
   if (preloader && loadPercentage && loaderBar) {
     let currentCount = 0;
-    const interval = 30; // ms per update
+    const interval = 30;
     const finalCount = 100;
 
-    // *** Total counting duration set to 8 seconds (8000ms) ***
+    // Total counting duration set to 8 seconds (8000ms)
     const totalCountDuration = 8000;
     const step = Math.ceil(finalCount / (totalCountDuration / interval));
 
@@ -138,10 +137,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Typing effect
   const words = [
-    'Frontend Developer',
+    'Frontend Engineer',
+    'GenAI Developer',
     'Wordpress Developer',
-    'Elementor Specialist',
-    'Freelancer',
+    'MERN Stack Developer',
   ];
   let wIndex = 0,
     charIndex = 0,
@@ -209,59 +208,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Data for each project to populate the modal
   const projectsData = {
-    'beauty-zone': {
-      img: 'BeautyZone.jpg',
-      title: 'Beauty Zone Website',
-      tags: ['HTML', 'CSS', 'Responsive'],
+    jarvis: {
+      img: 'material/jarvis.png',
+      title: 'Jarvis - AI Virtual Assistant',
+      tags: ['React', 'LLM APIs', 'Web APIs'],
       description:
-        'A sleek and responsive beauty salon website crafted with pure HTML and CSS. It features a modern design, clear service presentation, and a user-friendly interface optimized for all devices.',
-      github: 'https://github.com/DurveshPatil888/Beauty-Zone',
-      live: 'https://durveshpatil888.github.io/Beauty-Zone/',
+        'A custom AI-powered virtual assistant built with React.js and modern web APIs. Features advanced LLM integration with highly optimized prompt engineering to maintain complex conversation context and ensure accurate, context-aware responses. Architected with a highly responsive front-end interface for seamless, low-latency conversational user experience.',
+      github: 'https://github.com/DurveshPatil888/Jarvis-AI',
+      live: '#',
     },
-    'wine-shop': {
-      img: 'WineShop .jpg',
-      title: 'Wine Shop (WordPress)',
-      tags: ['WordPress', 'Elementor', 'E-commerce'],
+    'netflix-gpt': {
+      img: 'material/netflix GPT.png',
+      title: 'Netflix-GPT AI Movie Recommendation',
+      tags: ['React', 'GPT API', 'TMDB API'],
       description:
-        'A sophisticated e-commerce website for a wine shop, built on WordPress. Utilizes Elementor for custom page layouts and seamless product showcasing, offering a rich user experience.',
-      github: 'https://github.com/DurveshPatil888', // Replace with actual repo if available
-      // No live link provided, so it will not show in modal
+        'An AI-driven movie platform engineered to process 1000+ TMDB API records for dynamic content rendering. Features a chat-based AI recommendation engine generating tailored movie suggestions. Optimized React component re-renders by 30% via state and lifecycle control, and enhanced REST API response efficiency by 15% through streamlined asynchronous JavaScript handling.',
+      github: 'https://github.com/DurveshPatil888/Netflix-GPT',
+      live: 'https://netflix-gpt-tpu9-hazel.vercel.app/',
     },
-    'tic-tac-toe': {
-      img: 'TicTacToe.jpg',
-      title: 'Tic-Tac-Toe Game',
-      tags: ['HTML', 'CSS', 'JavaScript', 'Game'],
+    foodify: {
+      img: 'material/foodify.png',
+      title: 'Foodify Food Ordering App',
+      tags: ['React', 'Swiggy API', 'Redux'],
       description:
-        'A classic Tic-Tac-Toe game developed using HTML, CSS, and JavaScript. It provides an interactive and engaging user experience directly in the browser.',
-      github: 'https://github.com/DurveshPatil888/tic-tac-toe',
-      live: 'https://durveshpatil888.github.io/tic-tac-toe/',
-    },
-    'whack-a-mole': {
-      img: 'WhackaMoleGame.jpg',
-      title: 'Whack a Mole Game',
-      tags: ['HTML', 'CSS', 'JavaScript', 'Game'],
-      description:
-        'An exciting and interactive Whack-a-Mole game, developed with HTML, CSS, and JavaScript. Perfect for demonstrating dynamic DOM manipulation and event handling.',
-      github: 'https://github.com/DurveshPatil888/whack-a-mole-game',
-      live: 'https://durveshpatil888.github.io/whack-a-mole-game/',
-    },
-    'rock-paper-scissors': {
-      img: 'RockPaperScissors.jpg',
-      title: 'Rock Paper Scissors',
-      tags: ['HTML', 'CSS', 'JavaScript', 'Game'],
-      description:
-        'A simple yet engaging Rock-Paper-Scissors game implemented using HTML, CSS, and JavaScript. Features a clear user interface and straightforward game logic for a quick play.',
-      github: 'https://github.com/DurveshPatil888/Rock-Paper-Scissors',
-      live: 'https://durveshpatil888.github.io/Rock-Paper-Scissors/',
-    },
-    'weather-app': {
-      img: 'WeatherApp.jpg',
-      title: 'Weather App',
-      tags: ['HTML', 'CSS', 'JavaScript', 'API Integration'],
-      description:
-        'A dynamic weather application built with HTML, CSS, and JavaScript. It fetches real-time weather data for any specified city, providing current conditions and forecasts.',
-      github: 'https://github.com/DurveshPatil888/Weather-app',
-      live: 'https://durveshpatil888.github.io/Weather-app/',
+        'A food ordering application integrated with Swiggy public REST API endpoints and configured with a proxy server to bypass CORS constraints. Enhanced perceived application load performance by 25% using custom Shimmer UI placeholders. Enabled real-time network status monitoring using browser online and offline event listeners. Structured centralized cart state management using Redux, handling 10+ dynamic e-commerce interactions seamlessly.',
+      github: 'https://github.com/DurveshPatil888/Foodify',
+      live: 'https://foodify-ten-mu.vercel.app/',
     },
   };
 
@@ -306,6 +278,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
       projectModal.classList.add('active');
       document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
+
+      // Accessibility: move focus into modal and trap it
+      const focusable = projectModal.querySelectorAll(
+        'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
+      );
+      const firstFocusable = focusable[0];
+      const lastFocusable = focusable[focusable.length - 1];
+      // Remember previously focused element to restore later
+      projectModal._previouslyFocused = document.activeElement;
+      if (firstFocusable) firstFocusable.focus();
+
+      // Focus trap handler
+      function trap(e) {
+        if (e.key === 'Tab') {
+          if (e.shiftKey) {
+            if (document.activeElement === firstFocusable) {
+              e.preventDefault();
+              lastFocusable.focus();
+            }
+          } else {
+            if (document.activeElement === lastFocusable) {
+              e.preventDefault();
+              firstFocusable.focus();
+            }
+          }
+        }
+        if (e.key === 'Escape') {
+          closeProjectModal();
+        }
+      }
+
+      projectModal._trapHandler = trap;
+      document.addEventListener('keydown', trap);
     }
   }
 
@@ -313,13 +318,38 @@ document.addEventListener('DOMContentLoaded', () => {
   function closeProjectModal() {
     projectModal.classList.remove('active');
     document.body.style.overflow = ''; // Restore scrolling
+    // Remove focus trap handler and restore focus
+    if (projectModal._trapHandler) {
+      document.removeEventListener('keydown', projectModal._trapHandler);
+      projectModal._trapHandler = null;
+    }
+
+    // Restore focus to previously focused element if present
+    try {
+      const prev = projectModal._previouslyFocused;
+      if (prev && typeof prev.focus === 'function') prev.focus();
+    } catch (err) {
+      /* ignore */
+    }
   }
 
   // Event listeners for project cards
   projectCards.forEach((card) => {
+    // Make card keyboard-focusable
+    card.setAttribute('tabindex', '0');
+
     card.addEventListener('click', () => {
       const projectId = card.dataset.projectId;
       openProjectModal(projectId);
+    });
+
+    // Open modal on Enter or Space when card is focused
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        const projectId = card.dataset.projectId;
+        openProjectModal(projectId);
+      }
     });
   });
 
@@ -334,11 +364,44 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Close modal on Escape key press
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && projectModal.classList.contains('active')) {
-      closeProjectModal();
-    }
-  });
+  // (Handled by focus trap attached when modal opens)
+
+  // ********** COPY EMAIL + TOAST **********
+
+  const copyEmailBtn = document.getElementById('copy-email-btn');
+  const contactEmail = document.getElementById('contact-email');
+  const toast = document.getElementById('toast');
+
+  function showToast(message = 'Copied') {
+    if (!toast) return;
+    toast.textContent = message;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2200);
+  }
+
+  if (copyEmailBtn && contactEmail) {
+    copyEmailBtn.addEventListener('click', async (e) => {
+      const email = contactEmail.textContent.trim();
+      try {
+        await navigator.clipboard.writeText(email);
+        showToast('Email copied to clipboard');
+      } catch (err) {
+        // Fallback: select and use execCommand
+        const textarea = document.createElement('textarea');
+        textarea.value = email;
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+          document.execCommand('copy');
+          showToast('Email copied to clipboard');
+        } catch (e) {
+          // Last-resort: open mail client
+          window.location.href = `mailto:${email}`;
+        }
+        textarea.remove();
+      }
+    });
+  }
 
   // *****************************************
 });

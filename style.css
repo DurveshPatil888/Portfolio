@@ -7,8 +7,8 @@
   --card: #0f0f0f;
   --radius: 14px;
   --shadow: 0 8px 40px rgba(183, 75, 75, 0.18);
-  --shadow-hover: 0 -24px 80px 0 rgba(183, 75, 75, 0.38),
-    0 8px 40px rgba(0, 0, 0, 0.18);
+  --shadow-hover:
+    0 -24px 80px 0 rgba(183, 75, 75, 0.38), 0 8px 40px rgba(0, 0, 0, 0.18);
 
   /* New for Modal */
   --modal-bg: #1a1a1a;
@@ -31,10 +31,10 @@ header {
   justify-content: space-between;
   padding: 1.6rem 6%;
   z-index: 120;
-  background: transparent !important; /* ⬅️ !important जोड़ें */
-  backdrop-filter: none !important; /* ⬅️ !important जोड़ें */
-  box-shadow: none !important; /* ⬅️ !important जोड़ें */
-  transition: none; /* ⬅️ कोई fading effect नहीं */
+  background: transparent !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+  transition: none;
 }
 
 /* Scroll effect: Making it fully transparent even after scrolling */
@@ -71,7 +71,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+  transition:
+    opacity 0.5s ease-out,
+    visibility 0.5s ease-out;
   opacity: 1;
   visibility: visible;
 }
@@ -234,11 +236,15 @@ main {
   border-radius: 50%;
   box-shadow: none;
   display: block;
-  transition: box-shadow 0.35s cubic-bezier(0.4, 2, 0.6, 1), filter 0.3s;
+  transition:
+    box-shadow 0.35s cubic-bezier(0.4, 2, 0.6, 1),
+    filter 0.3s;
   filter: grayscale(10%) brightness(0.98);
 }
 .home-img:hover img {
-  box-shadow: 0 0 0 0px var(--accent), var(--shadow-hover);
+  box-shadow:
+    0 0 0 0px var(--accent),
+    var(--shadow-hover);
   filter: grayscale(0%) brightness(1.05);
 }
 
@@ -422,7 +428,10 @@ main {
   border-radius: 12px;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
   border: 1.2px solid transparent;
-  transition: box-shadow 0.18s, border 0.18s, transform 0.18s;
+  transition:
+    box-shadow 0.18s,
+    border 0.18s,
+    transform 0.18s;
   position: relative;
   overflow: hidden;
   min-height: 150px;
@@ -486,7 +495,10 @@ main {
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
   border: 1.2px solid transparent; /* Keep original border for consistency */
   cursor: pointer; /* Indicate it's clickable */
-  transition: box-shadow 0.2s ease, transform 0.2s ease, background 0.2s ease;
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease,
+    background 0.2s ease;
   position: relative;
   min-height: 220px;
 }
@@ -569,7 +581,9 @@ main {
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
   padding: 2rem; /* Add some padding for smaller screens */
   overflow-y: auto; /* Allow scrolling if content is too tall */
 }
@@ -589,7 +603,9 @@ main {
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
   transform: translateY(20px);
   opacity: 0;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
   border: 1px solid var(--modal-border); /* Subtle accent border */
 }
 
@@ -607,7 +623,9 @@ main {
   font-size: 3.5rem; /* Larger for better clickability */
   color: var(--muted);
   cursor: pointer;
-  transition: color 0.2s ease, transform 0.2s ease;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
   line-height: 1; /* Adjust vertical alignment */
 }
 
@@ -728,6 +746,128 @@ main {
 }
 /* End NEW PROJECT MODAL STYLES */
 
+/* EXPERIENCE SECTION */
+.experience-container {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  margin-top: 2rem;
+}
+
+.experience-item {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 2rem;
+  border-left: 4px solid var(--accent);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+  transition: all 0.22s cubic-bezier(0.4, 2, 0.6, 1);
+}
+
+.experience-item:hover {
+  transform: translateX(8px);
+  box-shadow: 0 8px 32px rgba(183, 75, 75, 0.18);
+  border-left-color: #fff;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.5rem;
+  gap: 2rem;
+}
+
+.experience-title-block {
+  flex: 1;
+}
+
+.experience-company {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.4rem;
+}
+
+.experience-role {
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.experience-meta {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  gap: 0.4rem;
+  min-width: 180px;
+}
+
+.experience-date {
+  font-size: 1.4rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.experience-location {
+  font-size: 1.4rem;
+  color: var(--muted);
+}
+
+.experience-highlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.experience-highlights li {
+  font-size: 1.4rem;
+  color: var(--muted);
+  line-height: 1.7;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.experience-highlights li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+/* Responsive adjustments for Experience */
+@media (max-width: 768px) {
+  .experience-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .experience-meta {
+    text-align: left;
+    min-width: auto;
+  }
+
+  .experience-item {
+    padding: 1.5rem;
+  }
+
+  .experience-company {
+    font-size: 1.6rem;
+  }
+
+  .experience-role {
+    font-size: 1.3rem;
+  }
+
+  .experience-highlights li {
+    font-size: 1.3rem;
+  }
+}
+
 /* ABOUT */
 .about-grid {
   display: grid;
@@ -770,7 +910,9 @@ main {
   border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
-  transition: box-shadow 0.22s, filter 0.22s;
+  transition:
+    box-shadow 0.22s,
+    filter 0.22s;
   filter: grayscale(10%) brightness(0.98);
   display: block;
   margin: 0 auto;
@@ -788,7 +930,8 @@ main {
   align-items: flex-start;
   text-align: left;
   background: #0d0d0d;
-  background-image: radial-gradient(
+  background-image:
+    radial-gradient(
       circle at 80% 20%,
       rgba(183, 75, 75, 0.1) 0%,
       transparent 60%
@@ -832,7 +975,33 @@ main {
   text-decoration: none;
   margin-bottom: 2.5rem;
   position: relative;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
+  transition:
+    color 0.3s ease,
+    text-shadow 0.3s ease;
+}
+
+.contact-email-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#copy-email-btn {
+  padding: 0.8rem 1.2rem;
+  font-size: 1.4rem;
+  border-radius: 8px;
+  border: 1.5px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+#copy-email-btn:hover,
+#copy-email-btn:active {
+  background: var(--accent);
+  color: #000;
+  transform: translateY(-2px);
 }
 
 .contact-email::after {
@@ -940,7 +1109,9 @@ main {
     transform: translateY(-100%) scaleY(0);
     transform-origin: top;
     opacity: 0;
-    transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+    transition:
+      transform 0.3s ease-out,
+      opacity 0.3s ease-out;
     pointer-events: none;
   }
   nav.show {
@@ -1118,4 +1289,38 @@ input:focus,
 textarea:focus {
   outline: 3px solid rgba(183, 75, 75, 0.18);
   outline-offset: 2px;
+}
+/* Visible focus for keyboard users only */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Toast notification */
+.toast {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  background: #111;
+  color: #fff;
+  padding: 1rem 1.4rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 0.22s ease,
+    transform 0.22s ease;
+  pointer-events: none;
+  z-index: 2000;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.project-card:focus {
+  outline: 3px solid rgba(183, 75, 75, 0.16);
+  outline-offset: 4px;
 }
